@@ -21,9 +21,9 @@ public class demoSMS {
 	 */
 	public static void main(String[] args) throws JAXBException, BlueviaException {
 		// App keys
-		OAuthToken consumer = new OAuthToken("IX11100175872028", "wWRA27497724");
+		OAuthToken consumer = new OAuthToken("Pk11120623706811", "bPfx34274197");
 		// User keys
-		OAuthToken accesstoken = new OAuthToken("4359366727d5de1f18037cf409701ef6", "ff2fe570784ff0ce7b374acec8b593a6");
+		OAuthToken accesstoken = new OAuthToken("a7061a98feb5ec1a348cc3edaff104e9", "84b5be2f01b79d1e0f6d8da19ed610e7");
 		// Create SMS Sender client
 		MessageMT smsSender = new MessageMT(consumer, accesstoken, Mode.SANDBOX);	
 		

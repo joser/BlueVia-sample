@@ -28,7 +28,7 @@ public class demoSMS2 {
 	 */
 	public static void main(String[] args) throws JAXBException, BlueviaException, IOException {
 		// App keys
-		OAuthToken consumer = new OAuthToken("IX11100175872028", "wWRA27497724");
+		OAuthToken consumer = new OAuthToken("Pk11120623706811", "bPfx34274197");
 		// Get request token
 		RequestToken rt = new RequestToken();
 		OAuthToken requestToken = rt.getRequestToken(consumer, null);
