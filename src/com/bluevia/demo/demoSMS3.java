@@ -31,15 +31,15 @@ public class demoSMS3 {
 		MessageMT smsSender = new MessageMT(consumer, accesstoken, Mode.SANDBOX);	
 		
 		// Send test message
-		String recipients[] = { "217040" };
-		String messageId = smsSender.send(recipients, "hola AppCircus Academy!");
+		String recipients[] = { "445480605" };
+		String messageId = smsSender.send(recipients, "SANDAPPCIRCUS hola AppCircus Academy!");
 		System.out.println("Message id : " + messageId);
 
 		// Create SMS Receiver client
 		MessageMO mo = new MessageMO(consumer, accesstoken, Mode.SANDBOX);
 
 		// Set up shortcode to receive messages from
-		ReceivedSMSType receivedMessages = mo.getMessages("217040");
+		ReceivedSMSType receivedMessages = mo.getMessages("445480605");
 
 		// Get messages
 		List<SMSMessageType> lm = receivedMessages.getReceivedSMS();
