@@ -30,8 +30,8 @@ public class demoSMS2 {
 		// App keys
 		OAuthToken consumer = new OAuthToken("Pk11120623706811", "bPfx34274197");
 		// Get request token
-		RequestToken rt = new RequestToken();
-		OAuthToken requestToken = rt.getRequestToken(consumer, null);
+		RequestToken rt = new RequestToken(consumer);
+		OAuthToken requestToken = rt.getRequestToken();
 		System.out.println("Request token id : " + requestToken.getToken());
 		System.out.println("Activate you app at : " + requestToken.getUrl());
 
@@ -41,8 +41,8 @@ public class demoSMS2 {
 	    String activationCode = br.readLine();
 
 		// Get keys from the user
-	    AccessToken at = new AccessToken();
-	    OAuthToken accessToken = at.get(consumer, requestToken, activationCode);
+	    AccessToken at = new AccessToken(consumer, requestToken);
+	    OAuthToken accessToken = at.get(activationCode);
 	    System.out.println("User key : " + accessToken.getToken());
 	    System.out.println("User secret : " + accessToken.getSecret());
 	    	    
@@ -50,7 +50,7 @@ public class demoSMS2 {
 		MessageMT smsSender = new MessageMT(consumer, accessToken, Mode.SANDBOX);	
 		
 		// Send message
-		String recipients[] = { "34650119986" };
+		String recipients[] = { "34600000000" };
 		String messageId = smsSender.send(recipients, "hola BlueVia");
 		System.out.println("Message id : " + messageId);
 		
@@ -63,11 +63,4 @@ public class demoSMS2 {
 		
 	}
 
-	
-	
-		
-		
-		
-	
-	
 }
